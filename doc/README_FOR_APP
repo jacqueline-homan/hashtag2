@@ -1,0 +1,3 @@
+This app uses the Twitter gem and allows a user to enter a term into a form and the results returned will be all the Tweets containing that term. 
+
+Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
