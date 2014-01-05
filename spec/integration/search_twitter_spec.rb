@@ -6,5 +6,8 @@ feature 'Search twitter for a term' do
   	fill_in 'Search', with: 'Rails'
   	click_button 'Search'
   	expect(page).to have_css 'li.tweet', count: 15
+    all('li.tweet').each do |tweet|
+      expect(tweet.text).to match /#rails/i # the "i" denotes case-insensitve searched tweets term 
+    end
   end	
 end
