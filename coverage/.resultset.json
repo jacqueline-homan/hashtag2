@@ -17,11 +17,11 @@
       "/home/jacqueline/thoughtbot/hashtag2/app/controllers/searches_controller.rb": [
         1,
         1,
-        1,
+        0,
         null,
         null,
         1,
-        1,
+        0,
         null,
         null
       ],
@@ -31,11 +31,18 @@
         1,
         null,
         1,
+        0,
+        null,
+        null
+      ],
+      "/home/jacqueline/thoughtbot/hashtag2/lib/fake_twitter.rb": [
+        1,
+        1,
         1,
         null,
         null
       ]
     },
-    "timestamp": 1388924302
+    "timestamp": 1388925534
   }
 }
