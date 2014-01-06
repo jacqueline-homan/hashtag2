@@ -43,6 +43,35 @@
         null,
         null
       ],
+      "/home/jacqueline/thoughtbot/hashtag2/app/models/twitter_client.rb": [
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/jacqueline/thoughtbot/hashtag2/lib/fake_twitter.rb": [
         1,
         1,
@@ -56,6 +85,6 @@
         null
       ]
     },
-    "timestamp": 1388948043
+    "timestamp": 1389002305
   }
 }
