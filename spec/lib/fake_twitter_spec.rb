@@ -16,3 +16,13 @@ describe FakeTwitter, '.[]=' do
     expect(results.first).to be_a Twitter::Status
   end
 end
+
+describe FakeTwitter, '.clear' do
+  it 'clears out the results' do
+    FakeTwitter['term'] = [{'text' =>'great'}]
+    FakeTwitter.clear
+
+    results = FakeTwitter.search('term').results
+    expect(results).to be_empty
+  end
+end
