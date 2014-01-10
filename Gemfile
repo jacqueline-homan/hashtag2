@@ -14,6 +14,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'bourne'
   gem 'dotenv-rails'
+  gem 'guard-spork'
 end 
 
 # Gems used only for assets and not required

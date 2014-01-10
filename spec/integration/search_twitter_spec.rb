@@ -3,10 +3,7 @@ require 'spec_helper'
 feature 'Search twitter for a term' do 
   scenario 'searching by a hashtag' do
   	search_for 'Rails'
-
-  	expect(page).to have_css 'li.tweet', count: 15
-    all('li.tweet').each do |tweet|
-      expect(tweet.text).to match /#rails/i # the "i" denotes case-insensitve searched tweets term 
+    user_sees_tweets 15, '#Rails'  	
     end
   end
 
@@ -15,6 +12,8 @@ feature 'Search twitter for a term' do
     FakeTwitter['#Rails'] = 3.times.map {{text: 'Testing is awesome'}}
     
     search_for 'Rails'
+
+    user_sees_tweets 3, 'Testing is awesome'
     expect(page).to have_css 'li.tweet', count: 3, text: 'Testing is awesome'
 
     #all('li.tweet').each do |tweet|
@@ -26,5 +25,12 @@ feature 'Search twitter for a term' do
     visit root_path
     fill_in 'Search', with: term
     click_button 'Search'
+  end
+
+  def user_sees_tweets(count, text)
+    expect(page).to have_css 'li.tweet', count: count
+    all('li.tweet').each do |tweet|
+    expect(tweet.text).to match /#{text}/i # the "i" denotes case-insensitve searched tweets term 
+    end
   end
 end
